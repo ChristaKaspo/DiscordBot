@@ -1,0 +1,24 @@
+{
+  "name": "Stackathon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristaKaspo/Stackathon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChristaKaspo/Stackathon/issues"
+  },
+  "homepage": "https://github.com/ChristaKaspo/Stackathon#readme",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "express": "^4.16.4"
+  }
+}
