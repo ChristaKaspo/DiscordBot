@@ -17,6 +17,15 @@ client.on('message', message => {
   if (message.content.startsWith('ping')) {
     message.channel.send('pong!');
   }
+  if (message.content === 'shrug') {
+    message.channel.send(`¯\\_( ツ )_/¯`);
+  }
+  if (message.content === 'flip') {
+    message.channel.send('(╯°□°）╯︵ ┻━┻');
+  }
+  if (message.content === 'unflip') {
+    message.channel.send('┬─┬ノ( ◕◡◕ ノ)');
+  }
   if (message.content === 'rip') {
     const attachment = new Attachment('https://i.imgur.com/w3duR07.png');
     message.channel.send(attachment);
@@ -29,21 +38,6 @@ client.on('message', message => {
   if (message.content.startsWith('avatar')) {
     message.reply(message.author.avatarURL);
   }
-  // if (message.content === '!join') {
-  //   if (message.guild.voiceConnection) {
-  //     message.channel.send(`I'm in another channel!`);
-  //   } else {
-  //     const channel = message.member.voiceChannel;
-  //     if (channel) {
-  //       channel
-  //         .join()
-  //         .then(connection => console.log('Connected'))
-  //         .catch(console.error);
-  //     } else {
-  //       message.channel.send('You have to be in the right channel fool!!!');
-  //     }
-  //   }
-  // }
   if (message.content.startsWith('!play')) {
     if (message.guild.voiceConnection) {
       message.channel.send(`I'm in another channel!`);
@@ -54,16 +48,17 @@ client.on('message', message => {
         let connection = channel.join();
         play(connection, url);
       } else {
-        message.channel.send('You have to be in the right channel fool!!!');
+        message.channel.send('You have to be in a channel fool!!!');
       }
     }
   }
+
   if (message.content === '!leave') {
     // const channel = message.member.voiceChannel;
     if (message.guild.voiceConnection) {
       message.guild.voiceConnection.disconnect();
     } else {
-      message.channel.send('Not in a chanel fool!!!');
+      message.channel.send('Not in a channel fool!!!');
     }
   }
 });
